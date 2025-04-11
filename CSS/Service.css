@@ -1,0 +1,162 @@
+body {
+    background-image: url(/Image/Service.jpg);
+    background-size: cover;
+}
+
+
+
+.container-fruid {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.nav-link {
+    margin-left: 25px;
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: lightgoldenrodyellow;
+    color: gold;
+    border-radius: 5px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    background-color: gold;
+    color: black;
+    display: block;
+}
+
+.nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
+    background-color: black;
+    color: gold;
+}
+
+.navbar-brand {
+    padding-top: 10px;
+    font-size: 25px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+i {
+    margin-top: 7px;
+}
+
+i:hover {
+    color: gold;
+}
+
+img {
+    margin-top: 30px;
+    width: 250px;
+    margin-left: 30px;
+    border-radius: 8px;
+}
+
+p:hover {
+    color: green;
+    text-shadow: 2px 2px 10px greenyellow;
+}
+
+img:hover {
+    box-shadow: 3px 3px 10px lightgoldenrodyellow;
+}
+
+.container.tab-pane {
+    display: flex;
+    margin-left: 25px;
+}
+
+.g1 {
+    color: white;
+    text-align: center;
+}
+.g1 h4{
+    margin-top: 27px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+h4:hover {
+    color: gold;
+    text-shadow: 3px 3px 15px lightgoldenrodyellow;
+}
+.g2 img{
+    width: 195px;
+}
+.g2 {
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+}
+.g2 h4{
+    margin-left: 20px;
+}
+.g2 p{
+    margin-left: 20px;
+}
+
+.g3{
+    color: white;
+    text-align: center;
+    margin-left: 25px;
+}
+.g3 img{
+    width: 195px;
+}
+.g3 h4{
+    margin-left: 28px;
+}
+.g3 p{
+    margin-left: 28px;
+}
+
+.g4{
+    color: white;
+    text-align: center;
+    margin-left: 25px;
+}
+.g4 img{
+    width: 195px;
+}
+.g4 h4{
+    margin-left: 25px;
+}
+.g4 p{
+    margin-left: 25px;
+}
+
+.conf{
+    margin-left: 300px;
+    margin-top: -300px;
+    text-align: center;
+}
+.conf h4{
+    margin-left: 20px;
+}
+.conf p{
+    margin-left: 20px;
+}
+.vit{
+    margin-top: -250px;
+}
+.vit h1{
+    margin-left: 320px;
+    color: red;
+    font-size: 70px;
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 5px 5px 30px lightgray;
+}
+.vit p{
+    margin-left: 400px;
+    color: gold;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: 3px 3px 20px green;
+}

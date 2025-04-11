@@ -1,0 +1,122 @@
+.member {
+    display: flex;
+}
+
+body{
+    background-image: url(/Image/black-circuit-technology-business-background-modern-technology-circuit-board-texture-background-design-quantum-computer-technologies-concepts-vector.jpg);
+}
+
+img {
+    border-radius: 12px;
+    width: 250px;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+a{
+    background: white;
+    text-decoration: none;
+    font-size: 18px;
+    border: solid;
+    border-radius: 8px;
+    border-width: thin;
+    color: black;
+    margin-left: 20px;
+    padding: 3px 3px;
+    transition: 1s;
+    
+}
+
+.logo{
+    padding-left:7px;
+    padding-right:7px;
+    font-size: 18px;
+}
+
+a:hover{
+    
+    color: aqua;
+}
+
+.member1 {
+    border: solid;
+    border-width: thin;
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px lightblue;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.member1 img {
+    width: 190px;
+}
+
+.member1:hover {
+    transform: rotateX(13deg) rotateY(-10deg);
+}
+
+.member2 {
+    border: solid;
+    border-width: thin;
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px lightblue;
+    margin-left: 30px;
+    transition: 0.5s;
+
+}
+
+.member2:hover {
+    transform: rotateX(13deg) rotateY(-10deg);
+}
+
+
+.member3 {
+    border: solid;
+    border-width: thin;
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px lightblue;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.member3:hover {
+    transform: rotateX(13deg) rotateY(-10deg);
+}
+
+.member4 {
+    border: solid;
+    border-width: thin;
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px lightblue;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.member4:hover {
+    transform: rotateX(13deg) rotateY(-10deg);
+}
+
+footer{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+ul{
+    list-style: circle;
+}
+li{
+    font-size: 20px;
+    font-family: inherit;
+    font-style: italic;
+    color: white;
+    padding-bottom: 5px;
+}
+
+.end{
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 80px;
+}

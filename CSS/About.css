@@ -1,0 +1,53 @@
+body{
+    background-image: url(/Image/About.jpg);
+}
+
+.foot{
+    margin-top: 165px;
+}
+
+li{
+    
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+}
+ul{
+    margin-left: 80px;
+    margin-right: -50px;
+}
+a{
+    margin-left: 10px;
+    margin-top: 30px;
+    background: white;
+    border: solid;
+    border-width: thin;
+    border-color: chocolate;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: black;
+    text-decoration: none;
+}
+.back{
+    margin-top: 20px;
+}
+a:hover{
+    color: greenyellow;
+}
+
+
+p{
+    font-size: 30px;
+    color: white;
+}
+
+.logo{
+    font-size: 30px;
+  
+}
+.Go{
+    font-size: 30px;
+}
