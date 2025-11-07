@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/Flower.css">
+    <link rel="stylesheet" href="../CSS/Flower.css">
     <title>Flowers</title>
 </head>
     
 <body class="not-loaded">
-    <a href="/Home/Home.html" class="linked">Back</a>
+    <a href="./Home.html" class="linked">Back</a>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -333,19 +333,72 @@
           <div class="flower__line__leaf flower__line__leaf--4"></div>
         </div>
       </div>
-      
-      <!-- Text "Kim Phụng" xuất hiện cuối animation -->
+        <!-- Text "Kim Phụng" xuất hiện cuối animation -->
       <div class="final-text">
         <span class="final-text__content">Kim Phụng</span>
+      </div>      <!-- Corner Images that appear after flowers -->
+      <div class="corner-image corner-image-1" id="cornerImage1">
+        <img src="../Image/anh 1.jpg" alt="Beautiful Image 1" />
       </div>
-    </div>
-    <script>
-        
+      
+      <div class="corner-image corner-image-2" id="cornerImage2">
+        <img src="../Image/anh 2.jpg" alt="Beautiful Image 2" />
+      </div>
+        <div class="corner-image corner-image-3" id="cornerImage3">
+        <img src="../Image/anh 3.jpg" alt="Beautiful Image 3" />
+      </div>
+      
+      <div class="corner-image corner-image-4" id="cornerImage4">
+        <img src="../Image/anh 4.jpg" alt="Beautiful Image 4" />
+      </div>
+      
+      <div class="corner-image corner-image-5" id="cornerImage5">
+        <img src="../Image/anh 5.jpg" alt="Beautiful Image 5" />
+      </div>
+    </div><script>
         onload = () => {
             const c = setTimeout(() => {
             document.body.classList.remove("not-loaded");
             clearTimeout(c);
-            }, 1000);
+            }, 1000);              // Show text and images at the same time after flower animation completes
+            setTimeout(() => {
+                const cornerImage1 = document.getElementById('cornerImage1');
+                const cornerImage2 = document.getElementById('cornerImage2');
+                const cornerImage3 = document.getElementById('cornerImage3');
+                const cornerImage4 = document.getElementById('cornerImage4');
+                const cornerImage5 = document.getElementById('cornerImage5');
+                const finalText = document.querySelector('.final-text');
+                
+                if (cornerImage1) {
+                    cornerImage1.classList.add('show');
+                    console.log('Ảnh 1 đã được hiển thị!');
+                }
+                
+                if (cornerImage2) {
+                    cornerImage2.classList.add('show');
+                    console.log('Ảnh 2 đã được hiển thị!');
+                }
+                
+                if (cornerImage3) {
+                    cornerImage3.classList.add('show');
+                    console.log('Ảnh 3 đã được hiển thị!');
+                }
+                
+                if (cornerImage4) {
+                    cornerImage4.classList.add('show');
+                    console.log('Ảnh 4 đã được hiển thị!');
+                }
+                
+                if (cornerImage5) {
+                    cornerImage5.classList.add('show');
+                    console.log('Ảnh 5 đã được hiển thị!');
+                }
+                
+                if (finalText) {
+                    finalText.classList.add('show');
+                    console.log('Text đã được hiển thị!');
+                }
+            }, 4000); // 4 giây sau khi trang load
         };
     </script>
   </body>

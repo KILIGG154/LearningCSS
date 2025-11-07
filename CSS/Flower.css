@@ -999,11 +999,17 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 /* Text "Kim Phụng" xuất hiện cuối animation */
 .final-text {
   position: absolute;
-  bottom: 100vmin;
+  bottom: 91vmin;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0) rotate(-15deg);
   z-index: 100;
-  animation: final-text-appear 2s 6s backwards;
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.final-text.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) rotate(0deg);
 }
 
 .final-text__content {
@@ -1021,14 +1027,32 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 2px;
+  animation: textGlow 3s ease-in-out infinite alternate;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 
+      0 0 10px rgba(255, 182, 193, 0.8),
+      0 0 20px rgba(255, 182, 193, 0.6),
+      0 0 30px rgba(255, 182, 193, 0.4);
+  }
+  100% {
+    text-shadow: 
+      0 0 20px rgba(255, 182, 193, 1),
+      0 0 30px rgba(255, 182, 193, 0.8),
+      0 0 40px rgba(255, 182, 193, 0.6),
+      0 0 50px rgba(255, 105, 180, 0.4);
+  }
 }
 
 @keyframes final-text-appear {
   0% {
     opacity: 0;
     transform: translateX(-50%) scale(0.5) translateY(20vmin);
-  }
-  50% {
+  }  50% {
     opacity: 0.8;
     transform: translateX(-50%) scale(1.2) translateY(-5vmin);
   }
@@ -1036,4 +1060,158 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     opacity: 1;
     transform: translateX(-50%) scale(1) translateY(0);
   }
+}
+
+/* Corner Image Styles */
+.corner-image {
+    position: absolute;
+    bottom: 80vmin;
+    right: 10vmin;
+    width: 250px;
+    height: 330px;
+    opacity: 0;
+    transform: scale(0) rotate(-15deg);
+    transition: all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 100;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.6);
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+.corner-image.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.corner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.corner-image:hover {
+    transform: scale(1.05) rotate(2deg);  /* Xoay nhẹ về phía khác */
+    box-shadow: 0 20px 50px rgba(255, 105, 180, 0.8);
+}
+
+.corner-image:hover img {
+    transform: scale(1.1);
+}
+
+.corner-image::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c, #ffb6c1, #ff69b4);
+    border-radius: 18px;
+    z-index: -1;
+    animation: borderGlow 4s linear infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { 
+        background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c, #ffb6c1, #ff69b4);
+        transform: rotate(0deg);
+    }
+    25% { 
+        background: linear-gradient(45deg, #ff1493, #dc143c, #ffb6c1, #ff69b4, #ff1493);
+        transform: rotate(90deg);
+    }
+    50% { 
+        background: linear-gradient(45deg, #dc143c, #ffb6c1, #ff69b4, #ff1493, #dc143c);
+        transform: rotate(180deg);
+    }
+    75% { 
+        background: linear-gradient(45deg, #ffb6c1, #ff69b4, #ff1493, #dc143c, #ffb6c1);
+        transform: rotate(270deg);
+    }
+}
+
+.corner-image::after {
+    content: '💝';
+    position: absolute;
+    top: -10px;
+    left: -10px; /* Chuyển từ right sang left để phù hợp với vị trí mới */
+    font-size: 20px;
+    animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Corner Image 1 - Top Left */
+.corner-image-1 {
+    bottom: 100vmin;
+    left: 25vmin;
+    right: auto;
+}
+
+/* Corner Image 2 - Top Right (original position) */
+.corner-image-2 {
+    bottom: 100vmin;
+    right: 15vmin;
+    left: auto;
+}
+
+/* Corner Image 3 - Top Center-Right */
+.corner-image-3 {
+    bottom: 100vmin;
+    right: 50vmin;
+    left: auto;
+}
+
+/* Corner Image 4 - Top Center-Left */
+.corner-image-4 {
+    bottom: 100vmin;
+    left: 60vmin;
+    right: auto;
+}
+
+/* Corner Image 5 - Top Far Right */
+.corner-image-5 {
+    bottom: 100vmin;
+    right: -20vmin;
+    left: auto;
+}
+
+/* Staggered animation delays for visual appeal */
+.corner-image-1.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.2s;
+}
+
+.corner-image-2.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.4s;
+}
+
+.corner-image-3.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.6s;
+}
+
+.corner-image-4.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.8s;
+}
+
+.corner-image-5.show {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 1.0s;
 }
