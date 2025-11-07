@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Animation - Kim Phụng</title>
+    <meta http-equiv="refresh" content="0; url=./Home/Homie.html">
+    <link rel="canonical" href="./Home/Homie.html">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .flower-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="flower-icon">🌸</div>
+        <h1>Loading Flower Animation...</h1>
+        <p>Redirecting to Kim Phụng's beautiful flower page...</p>
+        <p>If you are not redirected automatically, <a href="./Home/Homie.html" style="color: #ff69b4;">click here</a></p>
+    </div>
+    
+    <script>
+        // Immediate redirect for JavaScript-enabled browsers
+        window.location.href = "./Home/Homie.html";
+    </script>
+</body>
+</html>
