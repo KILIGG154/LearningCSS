@@ -995,3 +995,45 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .flower--4 .flower__leaf {
   background-image: linear-gradient(to top, #9370DB, #DA70D6);
 }
+
+/* Text "Kim Phụng" xuất hiện cuối animation */
+.final-text {
+  position: absolute;
+  bottom: 100vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: final-text-appear 2s 6s backwards;
+}
+
+.final-text__content {
+  font-family: 'Georgia', serif;
+  font-size: 5vmin;
+  font-weight: bold;
+  color: #FFB6C1;
+  text-shadow: 
+    0 0 10px rgba(255, 182, 193, 0.8),
+    0 0 20px rgba(255, 182, 193, 0.6),
+    0 0 30px rgba(255, 182, 193, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #FFB6C1, #FFC0CB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+@keyframes final-text-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5) translateY(20vmin);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.2) translateY(-5vmin);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
